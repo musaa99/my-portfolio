@@ -35,7 +35,7 @@ nav{
     color: white;
     font-family: cursive;
   }
-  .nav-items .nav-link{
+  .nav-items a {
     color: white;
     padding: 15px;
     text-decoration: none;
@@ -68,24 +68,30 @@ nav{
 /* footer*/
 footer{
     margin-top: 20px;
-    background-color: darkslateblue;
+    background-color: black;
     background-size: cover;
     height: 100px;
     padding: 80px 80px;
   }
   footer p{
     text-align: center;
+    color: cornsilk;
     font-size: 20px;
     font-weight: 900;
     font-family: Monospace;
   }
   .social-media-icon{
     display: flex;
+    color: whitesmoke;
     gap: 40px;
     font-size: 30px;
     justify-content: center;
     margin-bottom: 10px;
   }
+  @media(max-width:900px){
+    #home-info .info-img{
+      height: 50px;
+      padding: 10px 50px;
 
 /* contact*/
 #contact-form .form-group{
