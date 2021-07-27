@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,32 +10,34 @@
     <title>Musa Portfolio</title>
 </head>
 <body>
-    <header>
-        <nav>
-         <div class="logo-wrapper">
-         Musa Portfolio
-        </div>
-       <div class="nav-items">
-       <a class="nav-link" href="index.html">Home</a>
-       <a class="#" href="about.html">About</a>
-       <a class="nav-link" href="contact.html">Contact</a>
-       </div>
-    </header>
-    <main>
-        <section id="home-info">
-            <div class="info-img">
+    <nav>
+        <div class="logo"><h1><a href="index.html">Musa Portfolio</a></h1></div>
+                <div class="openMenu"><i class="fa fa-bars"></i></div> 
+            <ul class="mainmenu">
+                <li><a class="current" href="index.html">Home</a></li>
+                <li><a href=" about.html">about</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+    </nav>
+          
 
-            </div>
-            <div class="info-content">
-                <h2>My name is Musa Opaluwa </h2>
+    <script src="./hamburger.js"></script>
+    <section id="about-info" class="bg-light py-3">
+        <div class="container">
+           <div class="info-left">
+            <h2>My name is Musa Opaluwa </h2>
                 <p>A web developer with experience in front end development and passion for responsive website design
                     and firm believer in the mobile-first approach. </p>
                     <a href="about.html" class="btn">about me</a>
-            </div>
+           </div> 
+           <div class="info-right">
+            <img src="./img/musa.jpeg" alt="musa">
 
-
-        </section>
-    </main>
+           </div>   
+        </div>
+    </section>
+   
+    
     <footer>
         <div class="footer-text">
         <p class="footer-text">You Can Find Me At</p>
