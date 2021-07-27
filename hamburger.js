@@ -1,13 +1,11 @@
- const mainmenu = document.querySelector('.mainmenu');
- const openMenu = document.querySelector('.openMenu');
+const selectElement = function(element) {
+    return document.querySelector('element')
+};
 
- openMenu.addEventListerner('click,show');
- mainenu.addEventListerner('click,show');
-
- function show(){
-     mainmenu.style.display ='flex';
-     mainmenu.style.top ='0';
-
- }
- function close(){
-    mainmenu.style.top ='100%';
+const body = selectElement('body');
+const menuToggler = document.querySelector('.openMenu');
+menuToggler.addEventListener('click', function() {
+    let menu = document.querySelector('.mainmenu');
+    menu.classList.toggle('open');
+});
+console.log("click")
