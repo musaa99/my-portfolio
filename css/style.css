@@ -8,10 +8,13 @@
 html,body {
     font-family: 'Times New Roman', Times, serif;
     line-height: 1.7em; 
+    background-color: #4444; 
+    
 }
 a {
-    color: #333;
+    color: white;
     text-decoration: none;
+     
 }
 h1, h2, h3 {
     padding-bottom: 20px;
@@ -58,47 +61,15 @@ nav .openMenu{
     cursor: pointer;
 }
 
-nav .logo {
+.logo {
     margin: 6px;
+    color:white;
     font-size: 20px;
     cursor: pointer;
     padding-top: 10px;
 
-}
-@media (max-width: 900px){
-    nav .mainmenu{
-        height: 40vh;
-        width: 20%;
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 10;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: black;
-        transition: top 5s ease;
-        display: none;
+} 
 
-    }
-    nav .open{
-        display: block;
-    }
-    
-    nav .openMenu{
-        display: block;
-    }
-    nav .mainmenu li a:hover{
-        background: none;
-        color: coral;
-        font-size: 1.5rem;
-    }
-    .icons i{
-        display: inline-block;
-        padding: 10px;
-    }
-}
  /* padding */
  .py-1 { padding: 10px;}
  .py-2 { padding: 20px;}
@@ -123,7 +94,12 @@ nav .logo {
 #about-info .info-left{
     float: left;
     width: 50%;
-    min-height: 100%;
+    max-height: 100%; 
+}
+#about-info .info-left p {
+    font-style: italic;
+    font-size: 1.2rem;  
+    transition: all 5s ease;
 }
 
 /* footer*/
@@ -153,57 +129,127 @@ footer{
     
 
 /* contact*/
-#contact-form{ 
-    background-color: lightgrey;
-    padding: 20px;
-    
+.wrapper {
+	width: 90%;
+	margin: auto;
 }
-.contact {
-    margin: auto;
-    max-width: 1100px;
-    overflow: auto;
-    padding: 0 20px;
-    transition-property: background;
-    transition-duration: 2s;  
+.wrapper .Get-in-touch {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 }
-h1 p{
-    align-items: center;
-    justify-content: center;
+.wrapper .Get-in-touch h1 {
+	color: black;
+	text-align: center;
+	font-weight: 400;
 }
-#contact-form .form-group{
-    width: 80%;
-    padding: 10px;
-    margin: 5px 20px;
-    border-radius: 10px;
+.Get-in-touch .message__icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-#contact-form label {
-    display: block;
-    margin-bottom: 5px;
+.Get-in-touch i {
+	color: black;
+	padding: 5px;
 }
-#contact-form input, #contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px #ddd solid;
+.Get-in-touch span {
+	width: 100px;
+	height: 1px;
+	background-color: black;
+	display: flex;
+	justify-content: 'center';
+	align-items: 'center';
 }
-#contact-form textarea {
-    height: 200px;
+main {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 }
-#contact-form input:focus, #contact-form textarea:focus {
-    outline: none;
-    border-color:#f7c08a;
+main .contact {
+	flex-basis: 50%;
+}
+main .contact .contact__address {
+	margin-bottom: 5px;
+}
+main .contact .contact__address p {
+	color: black;
+	padding-bottom: 5px;
+}
+form {
+	flex: 50%;
+	width: 100%;
+	margin-top: 2em;
+}
+form input{
+	padding: 0.8em;
+	margin-bottom: 0.2em;
+	font-size: 0.9em;
+	background-color: black;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	outline: none;
+	width: 100%;
+}
+form input::placeholder {
+	color: grey;
+}
+form textarea {
+	padding: 0.7em;
+	font-size: 1em;
+	background-color: black;
+	border-radius: 4px;
+	outline: none;
+	width: 100%;
+	height: 7em;
+	color: grey;
+}
+form button {
+	padding: 0.9em;
+	color: white;
+	background-color: black;
+	font-size: 0.8em;
+	margin: 1em auto 5em auto;
+	border-radius: 20px 10px 30px 20px;
+	transition: all 2s ease;
+}
+
+form button:hover {
+	color: black;
+	background-color: white;
 }
 .btn{
-    background-color: red;
-    color: white;
-    font-size: 1.2rem;
-    
+    padding: 0.9em;
+	color: white;
+	background-color: green;
+	font-size: 0.8em;
+	margin: 1em auto 5em auto;
+	border-radius: 20px 10px 30px 20px;
+    transition: ease-in;
 }
-.btn :hover{
-    background-color: green
-    color: white;
-    font-size: 1.2rem;
-    
-} 
+.btn :hover::after {
+	color: black;
+	background-color: white;
+    content:
+}
+/*@media only screen and (max-width: 570px) {
+	main {
+	align-items: initial;
+	flex-direction: column;
+	justify-content: initial;
+}
+form {
+	width: 80%;
+	margin: 2em auto;
+}
+form button {
+	margin-bottom: 7em;
+	background-color: black;
+}*/
  /* skill */
  .skill{
     display: flex;
@@ -216,7 +262,7 @@ h1 p{
 .skill-container{
     text-align: center;
     background-color: darkgray;
-    margin-top:30px;
+    margin-top:30px;  
     padding-top:20px ;
     padding-left: 15px;
 }
@@ -224,15 +270,16 @@ h1 p{
 .skill .skill-set{
     background-color: white;
     padding: 20px;
-    width: 30%;
+    width: 90%;
     margin-bottom: 30px;
-    margin-left: 15px;
+    margin-left: 10px;
 }
 
 .skill .skill-set p span{
     color: rgb(47, 47, 117);
     font-weight: bolder;
 }
+
 /* masonry*/
 .mansory {
     display: grid;
@@ -240,6 +287,7 @@ h1 p{
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     grid-auto-rows: minmax(100px, auto);
+    
   }
   .mansory div img{
       object-fit: cover;
@@ -257,7 +305,7 @@ h1 p{
   }
   .box-3 {
     grid-column: 1;
-    grid-row: 2 / 5;
+    grid-row: 3 / 5;
   }
   .box-4 {
     grid-column: 3;
@@ -271,3 +319,50 @@ h1 p{
     grid-column: 3;
     grid-row: 4;
   }
+  @media (max-width: 700px){
+    nav .mainmenu{
+        height: 40vh;
+        width: 20%;
+        position: relative;  
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        transition: top 5s ease;
+        display: none;
+
+    }
+    nav .open{
+        display: inline-block;
+    }
+    
+    nav .openMenu{
+        display: block;
+    }
+    nav .mainmenu li a:hover{
+        background: none;
+        color: coral;
+        font-size: 1.5rem;
+    }
+    .icons i{
+        display: inline-block;
+        padding: 10px;
+    }
+    main {
+        align-items: initial;
+        flex-direction: column;
+        justify-content: initial;
+    }
+    form {
+        width: 80%;
+        margin: 2em auto;
+    }
+    form button {
+        margin-bottom: 7em;
+        background-color: black;
+    }
+}

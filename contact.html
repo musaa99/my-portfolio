@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,47 +11,74 @@
 </head>
 <body>
     <nav>
-        <div class="logo"><h1><a href="index.html">Musa Portfolio</a></h1></div>
+        <div class="logo"><h1><a href="index.html">HOME </a></h1></div>
                 <div class="openMenu"><i class="fa fa-bars"></i></div> 
             <ul class="mainmenu">
                 <li><a class="current" href="index.html">Home</a></li>
+                <li><a class="current" href="project.html">Project</a></li> 
                 <li><a href=" about.html">about</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
     </nav>
     <script src="./hamburger.js"></script>
     
-    <section id="contact-form">
-        <div class="contact"> 
-            <h1>Contact Me</h1>
-            <p> I will love to help! I like to create things with fun. open-minded people. feel free to say hello</p>
-            <form action="process.php">
-                <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="name">
+    <div class="wrapper">
+        <header class="Get-in-touch">
+            <h1>Get in Touch</h1>
+            <h2>I will love to help! I like to create things with fun. open-minded people. feel free to say hello</h2>
+            <div class="message__icon">
+                <span></span>
+                <i class="fa fa-comment-alt"></i>
+                <span></span>
+            </div>
+         </header>
+        <main>
+            <div class="contact">
+                <div class="contact__address">
+                    <i class="fa fa-phone-alt"></i>
+                    <p>Phone</p>
+                    <p>+234809508901</p>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email">
+                <div class="contact__address">
+                    <i class="fa fa-map-marker-alt"></i>
+                    <p>Location</p>
+                    <p>3rd street house 18 NAf unity estate Abuja.</p>
                 </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message"></textarea>
+                <div class="contact__address">
+                    <i class="fa fa-envelope"></i>
+                    <p>Email</p>
+                    <p>musaopaluwa@gmail.com</p>
                 </div>
-                <button type="submit"
-                class="btn">Submit</button>
+            </div>
+            <form method='POST' name='contact'><input type='hidden' name='form-name' value='contact' />
+                <input type="text" name="name" id="name" placeholder="Name:*" />
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Enter Email Address:*"
+                />
+                <textarea
+                    name="message"
+                    id="message"
+                    placeholder="Your Message"
+                ></textarea>
+                <button type="submit">Send Message</button>
             </form>
-        </div>
-    </section>
+        </main>
+    </div>
 <footer>
     <div class="footer-text">
-    <p class="footer-text">You Can Find Me At</p>
+    <p class="footer-text">You Can Find Me At</p> 
     </div>
-    <div class="social-media-icon">
-      <i class="fab fa-github"></i> 
-      <i class="fab fa-facebook"></i>
-      <i class="fab fa-twitter-square"></i>
-    </div>
+    <div class="social-media-icon"> 
+        <a href="https://github.com/musaa99" target="_blank">
+            <i class="fab fa-github"></i>
+        <a href="https://linkedin.com/in/musa-opaluwa-31b127119" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        <a href="https://twitter.com/musaa_99" target="_blank">
+            <i class="fab fa-twitter"></i>  
+      </div> 
   </footer>
 </body>
 </html>
